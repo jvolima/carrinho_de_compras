@@ -109,7 +109,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       const productIndex = cart.indexOf(product);
 
       const newCart = [...cart];
-      newCart[productIndex].amount += amount;
+      newCart[productIndex].amount = amount;
       setCart(newCart);
 
       localStorage.setItem('@RocketShoes:cart', JSON.stringify(cart));
