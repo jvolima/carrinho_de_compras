@@ -51,7 +51,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
         }
       }
 
-      const productResponse = await api.get(`product/${productId}`);
+      const productResponse = await api.get(`products/${productId}`);
       const dataProduct = productResponse.data;
 
       const response = await api.get(`stock/${productId}`);
